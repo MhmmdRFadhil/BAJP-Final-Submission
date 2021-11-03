@@ -4,7 +4,7 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class CatalogueEnitity(
+data class CatalogueEntity(
     val id: Int? = 0,
     val title: String? = null,
     val years: String? = null,

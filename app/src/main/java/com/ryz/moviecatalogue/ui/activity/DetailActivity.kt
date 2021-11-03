@@ -8,7 +8,7 @@ import android.view.MenuItem
 import androidx.lifecycle.ViewModelProvider
 import com.ryz.moviecatalogue.R
 import com.ryz.moviecatalogue.databinding.ActivityDetailBinding
-import com.ryz.moviecatalogue.model.CatalogueEnitity
+import com.ryz.moviecatalogue.model.CatalogueEntity
 import com.ryz.moviecatalogue.utils.loadImageUrl
 
 class DetailActivity : AppCompatActivity() {
@@ -42,7 +42,7 @@ class DetailActivity : AppCompatActivity() {
         }
     }
 
-    private fun populateDataDetail(catalogue: CatalogueEnitity) {
+    private fun populateDataDetail(catalogue: CatalogueEntity) {
         binding.apply {
             posterDetail.loadImageUrl(catalogue.poster)
             tvTitleDetail.text = catalogue.title

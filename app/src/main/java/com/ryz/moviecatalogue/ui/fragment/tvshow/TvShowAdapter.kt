@@ -5,35 +5,35 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ryz.moviecatalogue.databinding.ItemRowTvShowBinding
 import com.ryz.moviecatalogue.interfaces.ItemClickedCallback
-import com.ryz.moviecatalogue.model.CatalogueEnitity
+import com.ryz.moviecatalogue.model.CatalogueEntity
 import com.ryz.moviecatalogue.utils.loadImageUrl
 
 class TvShowAdapter: RecyclerView.Adapter<TvShowAdapter.ViewHolder>() {
 
     private lateinit var onItemClickedCallback: ItemClickedCallback
-    private val listTvShow = ArrayList<CatalogueEnitity>()
+    private val listTvShow = ArrayList<CatalogueEntity>()
 
     fun setOnItemClickedCallback(onItemClickedCallback: ItemClickedCallback) {
         this.onItemClickedCallback = onItemClickedCallback
     }
 
-    fun setTvShow(catalogueEnitity: List<CatalogueEnitity>?) {
-        if (catalogueEnitity == null) return
+    fun setTvShow(catalogueEntity: List<CatalogueEntity>?) {
+        if (catalogueEntity == null) return
         listTvShow.clear()
-        listTvShow.addAll(catalogueEnitity)
+        listTvShow.addAll(catalogueEntity)
     }
 
     inner class ViewHolder(private val binding: ItemRowTvShowBinding): RecyclerView.ViewHolder(binding.root) {
-        fun bind (catalogueEnitity: CatalogueEnitity) {
+        fun bind (catalogueEntity: CatalogueEntity) {
             with(binding) {
-                tvItemTitleTvShow.text = catalogueEnitity.title
-                tvItemGenreTvShow.text = catalogueEnitity.genre
-                tvItemDurationTvShow.text = catalogueEnitity.duration
-                posterTvShow.loadImageUrl(catalogueEnitity.poster)
+                tvItemTitleTvShow.text = catalogueEntity.title
+                tvItemGenreTvShow.text = catalogueEntity.genre
+                tvItemDurationTvShow.text = catalogueEntity.duration
+                posterTvShow.loadImageUrl(catalogueEntity.poster)
             }
 
             itemView.setOnClickListener {
-                onItemClickedCallback.onItemClick(catalogueEnitity)
+                onItemClickedCallback.onItemClick(catalogueEntity)
             }
         }
     }

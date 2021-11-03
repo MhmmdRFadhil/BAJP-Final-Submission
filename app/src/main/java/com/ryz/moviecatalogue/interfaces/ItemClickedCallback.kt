@@ -1,7 +1,7 @@
 package com.ryz.moviecatalogue.interfaces
 
-import com.ryz.moviecatalogue.model.CatalogueEnitity
+import com.ryz.moviecatalogue.model.CatalogueEntity
 
 interface ItemClickedCallback {
-    fun onItemClick(catalogueEnitity: CatalogueEnitity)
+    fun onItemClick(catalogueEntity: CatalogueEntity)
 }

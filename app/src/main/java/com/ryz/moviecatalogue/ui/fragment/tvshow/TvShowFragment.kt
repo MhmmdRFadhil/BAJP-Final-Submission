@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ryz.moviecatalogue.databinding.FragmentTvShowBinding
 import com.ryz.moviecatalogue.interfaces.ItemClickedCallback
-import com.ryz.moviecatalogue.model.CatalogueEnitity
+import com.ryz.moviecatalogue.model.CatalogueEntity
 import com.ryz.moviecatalogue.ui.activity.DetailActivity
 import com.ryz.moviecatalogue.ui.activity.DetailViewModel.Companion.TV
 
@@ -46,9 +46,9 @@ class TvShowFragment : Fragment() {
             }
 
             tvShowAdapter.setOnItemClickedCallback(object : ItemClickedCallback {
-                override fun onItemClick(catalogueEnitity: CatalogueEnitity) {
+                override fun onItemClick(catalogueEntity: CatalogueEntity) {
                     val intent = Intent(context, DetailActivity::class.java)
-                    intent.putExtra(DetailActivity.EXTRA_ID, catalogueEnitity.id)
+                    intent.putExtra(DetailActivity.EXTRA_ID, catalogueEntity.id)
                     intent.putExtra(DetailActivity.EXTRA_CATEGORY, TV)
                     startActivity(intent)
                 }

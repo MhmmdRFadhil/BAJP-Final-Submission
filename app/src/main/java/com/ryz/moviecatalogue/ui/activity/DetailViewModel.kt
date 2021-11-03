@@ -1,12 +1,12 @@
 package com.ryz.moviecatalogue.ui.activity
 
 import androidx.lifecycle.ViewModel
-import com.ryz.moviecatalogue.model.CatalogueEnitity
+import com.ryz.moviecatalogue.model.CatalogueEntity
 import com.ryz.moviecatalogue.utils.DataDummy
 
 class DetailViewModel : ViewModel() {
 
-    private lateinit var catalogue: CatalogueEnitity
+    private lateinit var catalogue: CatalogueEntity
 
     fun setCatalogue(id: Int?, category: String) {
         when (category) {

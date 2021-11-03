@@ -1,14 +1,14 @@
 package com.ryz.moviecatalogue.utils
 
 import com.ryz.moviecatalogue.R
-import com.ryz.moviecatalogue.model.CatalogueEnitity
+import com.ryz.moviecatalogue.model.CatalogueEntity
 
 object DataDummy {
-    fun getMovie(): List<CatalogueEnitity> {
-        val movies = ArrayList<CatalogueEnitity>()
+    fun getMovie(): List<CatalogueEntity> {
+        val movies = ArrayList<CatalogueEntity>()
 
         movies.add(
-            CatalogueEnitity(
+            CatalogueEntity(
                 0,
                 "A Star Is Born",
                 "2018",
@@ -21,7 +21,7 @@ object DataDummy {
         )
 
         movies.add(
-            CatalogueEnitity(
+            CatalogueEntity(
                 1,
                 "Alita: Battle Angle",
                 "2019",
@@ -34,7 +34,7 @@ object DataDummy {
         )
 
         movies.add(
-            CatalogueEnitity(
+            CatalogueEntity(
                 2,
                 "Aquaman",
                 "2018",
@@ -47,7 +47,7 @@ object DataDummy {
         )
 
         movies.add(
-            CatalogueEnitity(
+            CatalogueEntity(
                 3,
                 "Bohemian Rhapsody",
                 "2018",
@@ -60,7 +60,7 @@ object DataDummy {
         )
 
         movies.add(
-            CatalogueEnitity(
+            CatalogueEntity(
                 4,
                 "Cold Pursuit",
                 "2019",
@@ -73,7 +73,7 @@ object DataDummy {
         )
 
         movies.add(
-            CatalogueEnitity(
+            CatalogueEntity(
                 5,
                 "Creed II",
                 "2018",
@@ -86,7 +86,7 @@ object DataDummy {
         )
 
         movies.add(
-            CatalogueEnitity(
+            CatalogueEntity(
                 6,
                 "Fantastic Beast: The Crimes of Grindelwald",
                 "2018",
@@ -99,7 +99,7 @@ object DataDummy {
         )
 
         movies.add(
-            CatalogueEnitity(
+            CatalogueEntity(
                 7,
                 "Glass",
                 "2019",
@@ -112,7 +112,7 @@ object DataDummy {
         )
 
         movies.add(
-            CatalogueEnitity(
+            CatalogueEntity(
                 8,
                 "How to Train Your Dragon: The Hidden World",
                 "2019",
@@ -125,7 +125,7 @@ object DataDummy {
         )
 
         movies.add(
-            CatalogueEnitity(
+            CatalogueEntity(
                 9,
                 "Avengers: Infinity Wars",
                 "2018",
@@ -140,11 +140,11 @@ object DataDummy {
         return movies
     }
 
-    fun getTvShow(): List<CatalogueEnitity> {
-        val tvShow = ArrayList<CatalogueEnitity>()
+    fun getTvShow(): List<CatalogueEntity> {
+        val tvShow = ArrayList<CatalogueEntity>()
 
         tvShow.add(
-            CatalogueEnitity(
+            CatalogueEntity(
                 0,
                 "Arrow",
                 "2012",
@@ -157,7 +157,7 @@ object DataDummy {
         )
 
         tvShow.add(
-            CatalogueEnitity(
+            CatalogueEntity(
                 1,
                 "Doom Patrol",
                 "2019",
@@ -170,7 +170,7 @@ object DataDummy {
         )
 
         tvShow.add(
-            CatalogueEnitity(
+            CatalogueEntity(
                 2,
                 "Dragon Ball",
                 "1986",
@@ -183,7 +183,7 @@ object DataDummy {
         )
 
         tvShow.add(
-            CatalogueEnitity(
+            CatalogueEntity(
                 3,
                 "Fairy Tail",
                 "2009",
@@ -196,7 +196,7 @@ object DataDummy {
         )
 
         tvShow.add(
-            CatalogueEnitity(
+            CatalogueEntity(
                 4,
                 "Family Guy",
                 "1999",
@@ -209,7 +209,7 @@ object DataDummy {
         )
 
         tvShow.add(
-            CatalogueEnitity(
+            CatalogueEntity(
                 5,
                 "The Flash",
                 "2014",
@@ -222,7 +222,7 @@ object DataDummy {
         )
 
         tvShow.add(
-            CatalogueEnitity(
+            CatalogueEntity(
                 6,
                 "Game of Throne",
                 "2011",
@@ -235,7 +235,7 @@ object DataDummy {
         )
 
         tvShow.add(
-            CatalogueEnitity(
+            CatalogueEntity(
                 7,
                 "Gotham",
                 "2014",
@@ -248,7 +248,7 @@ object DataDummy {
         )
 
         tvShow.add(
-            CatalogueEnitity(
+            CatalogueEntity(
                 8,
                 "Grey's Anatomy",
                 "2005",
@@ -261,7 +261,7 @@ object DataDummy {
         )
 
         tvShow.add(
-            CatalogueEnitity(
+            CatalogueEntity(
                 9,
                 "Hanna",
                 "2019",
