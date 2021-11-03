@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Movie Catalogue</string>
+    <string name="title_splashscreen">Movie Catalogue</string>
+    <string name="menu_movies">Movies</string>
+    <string name="menu_tv_show">TV Show</string>
+    <string name="title_catalogue">Title</string>
+    <string name="genre_catalogue">Genre</string>
+    <string name="duration_catalogue">Duration</string>
+    <string name="years_catalogue">Years</string>
+    <string name="user_score_catalogue">Score</string>
+    <string name="overview_catalogue">Overview</string>
+    <string name="overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam neque nibh, lobortis sodales volutpat et, ultrices vitae enim. Pellentesque non enim non erat dapibus placerat. Suspendisse mi tortor, fermentum sed massa ut, faucibus hendrerit nibh. Duis nec mollis purus, eget efficitur nisl. Nulla blandit mauris in purus dictum ullamcorper</string>
+    <string name="share">Share</string>
+</resources>
