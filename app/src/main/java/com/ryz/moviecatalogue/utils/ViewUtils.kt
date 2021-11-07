@@ -4,13 +4,14 @@ import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
+import com.ryz.moviecatalogue.BuildConfig.IMAGE_URL
 import com.ryz.moviecatalogue.R
 
-fun ImageView.loadImageUrl(image: Int?) {
+fun ImageView.loadImageUrl(url: String) {
     Glide.with(this.context)
-        .load(image)
+        .load(IMAGE_URL + url)
         .transform(RoundedCorners(25))
-        .apply(RequestOptions.placeholderOf(R.drawable.ic_baseline_refresh_24))
         .error(R.drawable.ic_baseline_broken_image_24)
+        .apply(RequestOptions.placeholderOf(R.drawable.ic_baseline_refresh_24))
         .into(this)
 }

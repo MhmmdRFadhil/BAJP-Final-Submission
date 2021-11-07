@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.ryz.moviecatalogue.R
-import com.ryz.moviecatalogue.ui.fragment.movie.MovieFragment
-import com.ryz.moviecatalogue.ui.fragment.tvshow.TvShowFragment
+import com.ryz.moviecatalogue.ui.content.movie.MovieFragment
+import com.ryz.moviecatalogue.ui.content.tvshow.TvShowFragment
 
 class SectionPagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
     override fun getItemCount(): Int = TAB_TITLES.size

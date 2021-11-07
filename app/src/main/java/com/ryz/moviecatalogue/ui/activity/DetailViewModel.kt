@@ -1,32 +1,29 @@
 package com.ryz.moviecatalogue.ui.activity
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.ryz.moviecatalogue.model.CatalogueEntity
-import com.ryz.moviecatalogue.utils.DataDummy
+import com.ryz.moviecatalogue.data.source.CatalogueRepository
+import com.ryz.moviecatalogue.data.source.entity.DetailEntity
 
-class DetailViewModel : ViewModel() {
+class DetailViewModel(private val catalogueRepository: CatalogueRepository) : ViewModel() {
 
-    private lateinit var catalogue: CatalogueEntity
+    private lateinit var detail: LiveData<DetailEntity>
 
-    fun setCatalogue(id: Int?, category: String) {
+    fun setCatalogue(id: Int, category: String) {
         when (category) {
-            MOVIE -> {
-                DataDummy.getMovie().forEach { movie ->
-                    if (movie.id == id) catalogue = movie
-                }
+            TYPE_MOVIE -> {
+                detail = catalogueRepository.getDetailNowPlayingMovies(id)
             }
-            TV -> {
-                DataDummy.getTvShow().forEach { tvShow ->
-                    if (tvShow.id == id) catalogue = tvShow
-                }
+            TYPE_TV_SHOW -> {
+                detail = catalogueRepository.getDetailTvAiringToday(id)
             }
         }
     }
 
-    fun getCatalogue() = catalogue
+    fun getCatalogue() = detail
 
     companion object {
-        const val MOVIE = "movie"
-        const val TV = "tv"
+        const val TYPE_MOVIE = "movie"
+        const val TYPE_TV_SHOW = "tv"
     }
 }

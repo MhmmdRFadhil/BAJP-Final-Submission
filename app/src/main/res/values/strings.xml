@@ -11,4 +11,6 @@
     <string name="overview_catalogue">Overview</string>
     <string name="overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam neque nibh, lobortis sodales volutpat et, ultrices vitae enim. Pellentesque non enim non erat dapibus placerat. Suspendisse mi tortor, fermentum sed massa ut, faucibus hendrerit nibh. Duis nec mollis purus, eget efficitur nisl. Nulla blandit mauris in purus dictum ullamcorper</string>
     <string name="share">Share</string>
+    <string name="no_info">No info</string>
+    <string name="unknown">-</string>
 </resources>
