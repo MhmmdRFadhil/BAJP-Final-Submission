@@ -14,8 +14,6 @@ import com.ryz.moviecatalogue.databinding.FragmentCatalogueBinding
 import com.ryz.moviecatalogue.ui.activity.DetailActivity
 import com.ryz.moviecatalogue.ui.activity.DetailViewModel.Companion.TYPE_MOVIE
 import com.ryz.moviecatalogue.ui.activity.DetailViewModel.Companion.TYPE_TV_SHOW
-import com.ryz.moviecatalogue.ui.content.movie.MovieViewModel
-import com.ryz.moviecatalogue.ui.content.tvshow.TvShowViewModel
 import com.ryz.moviecatalogue.viewmodel.ViewModelFactory
 
 class CatalogueFragment : Fragment() {
@@ -33,13 +31,12 @@ class CatalogueFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         if (activity != null) {
             val factory = ViewModelFactory.getInstance()
-            val movieViewModel = ViewModelProvider(this, factory)[MovieViewModel::class.java]
-            val tvShowViewModel = ViewModelProvider(this, factory)[TvShowViewModel::class.java]
+            val catalogueViewModel = ViewModelProvider(this, factory)[CatalogueViewModel::class.java]
 
             binding?.progressBar?.visibility = View.VISIBLE
             val catalogueAdapter = CatalogueAdapter()
             if (arguments?.getInt(ARG_SECTION_NUMBER, 0) == 0) {
-                movieViewModel.getMovieNowPlaying().observe(viewLifecycleOwner, {
+                catalogueViewModel.getMovieNowPlaying().observe(viewLifecycleOwner, {
                     binding?.progressBar?.visibility = View.GONE
                     catalogueAdapter.setCatalogue(it)
                 })
@@ -52,7 +49,7 @@ class CatalogueFragment : Fragment() {
                     }
                 })
             } else {
-                tvShowViewModel.getTvShowAiringToday().observe(viewLifecycleOwner, {
+                catalogueViewModel.getTvShowAiringToday().observe(viewLifecycleOwner, {
                     binding?.progressBar?.visibility = View.GONE
                     catalogueAdapter.setCatalogue(it)
                 })

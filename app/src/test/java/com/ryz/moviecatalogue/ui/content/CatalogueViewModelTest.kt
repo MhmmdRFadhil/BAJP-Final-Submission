@@ -1,4 +1,4 @@
-package com.ryz.moviecatalogue.ui.content.tvshow
+package com.ryz.moviecatalogue.ui.content
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
@@ -10,6 +10,7 @@ import com.ryz.moviecatalogue.utils.DataDummy
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Rule
+
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mock
@@ -17,8 +18,9 @@ import org.mockito.Mockito
 import org.mockito.junit.MockitoJUnitRunner
 
 @RunWith(MockitoJUnitRunner::class)
-class TvShowViewModelTest {
-    private lateinit var viewModel: TvShowViewModel
+class CatalogueViewModelTest {
+
+    private lateinit var catalogueViewModel: CatalogueViewModel
 
     @get:Rule
     var instantTaskExecutorRule = InstantTaskExecutorRule()
@@ -31,20 +33,35 @@ class TvShowViewModelTest {
 
     @Before
     fun setUp() {
-        viewModel = TvShowViewModel(catalogueRepository)
+        catalogueViewModel = CatalogueViewModel(catalogueRepository)
     }
 
     @Test
-    fun getTvShow() {
+    fun getMovieNowPlaying() {
+        val dummyMovies = DataDummy.getMovie()
+        val movies = MutableLiveData<List<CatalogueEntity>>()
+        movies.value = dummyMovies
+
+        Mockito.`when`(catalogueRepository.getNowPlayingMovies()).thenReturn(movies)
+        val movie = catalogueViewModel.getMovieNowPlaying().value
+        assertNotNull(movie)
+        assertEquals(10, movie?.size)
+
+        catalogueViewModel.getMovieNowPlaying().observeForever(observer)
+        verify(observer).onChanged(dummyMovies)
+    }
+
+    @Test
+    fun getTvShowAiringToday() {
         val dummyTvShow = DataDummy.getTvShow()
         val tvShows = MutableLiveData<List<CatalogueEntity>>()
         tvShows.value = dummyTvShow
 
         Mockito.`when`(catalogueRepository.getTvAiringToday()).thenReturn(tvShows)
-        val tvShow = viewModel.getTvShowAiringToday().value
+        val tvShow = catalogueViewModel.getTvShowAiringToday().value
         assertNotNull(tvShow)
         assertEquals(10, tvShow?.size)
-        viewModel.getTvShowAiringToday().observeForever(observer)
+        catalogueViewModel.getTvShowAiringToday().observeForever(observer)
         verify(observer).onChanged(dummyTvShow)
     }
 }
