@@ -31,7 +31,8 @@ class CatalogueFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         if (activity != null) {
             val factory = ViewModelFactory.getInstance()
-            val catalogueViewModel = ViewModelProvider(this, factory)[CatalogueViewModel::class.java]
+            val catalogueViewModel =
+                ViewModelProvider(this, factory)[CatalogueViewModel::class.java]
 
             binding?.progressBar?.visibility = View.VISIBLE
             val catalogueAdapter = CatalogueAdapter()
