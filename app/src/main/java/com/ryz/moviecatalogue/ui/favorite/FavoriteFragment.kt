@@ -24,7 +24,7 @@ class FavoriteFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         if (activity != null) {
-            (activity as MainActivity).supportActionBar?.title = "Favorite Catalogue"
+            (activity as MainActivity).supportActionBar?.title = getString(R.string.title_favorite)
             val pagerAdapter = FavoriteSectionPagerAdapter(context as AppCompatActivity)
             binding?.let {
                 it.viewPager.adapter = pagerAdapter
@@ -39,5 +39,10 @@ class FavoriteFragment : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         menu.findItem(R.id.action_sort).isVisible = false
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
     }
 }

@@ -36,4 +36,7 @@
     <string name="subtitle_result_empty_data_movie">Please add the Movie of your choice so that it appears on this page</string>
     <string name="title_result_empty_data_tv_show">My favorite TV Show list is empty</string>
     <string name="subtitle_result_empty_data_tv_show">Please add the TV Show of your choice so that it appears on this page</string>
+    <string name="title_favorite">Favorite Catalogue</string>
+    <string name="title_movie">Movie Catalogue</string>
+    <string name="title_tv_show">TV Show Catalogue</string>
 </resources>

@@ -41,7 +41,7 @@ class TvShowFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         if (activity != null) {
-            (activity as MainActivity).supportActionBar?.title = "TV Show Catalogue"
+            (activity as MainActivity).supportActionBar?.title = getString(R.string.title_tv_show)
             showLoading(true)
             setViewModel()
         }
@@ -99,8 +99,8 @@ class TvShowFragment : Fragment() {
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
+        super.onDestroyView()
         binding = null
     }
 

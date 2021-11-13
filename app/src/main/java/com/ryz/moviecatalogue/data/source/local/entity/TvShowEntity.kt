@@ -10,29 +10,29 @@ data class TvShowEntity(
     @PrimaryKey
     @NonNull
     @ColumnInfo(name = "id")
-    var id: Int? = 0,
+    val id: Int? = 0,
 
     @ColumnInfo(name = "title")
-    var title: String? = null,
+    val title: String? = null,
 
     @ColumnInfo(name = "poster")
-    var poster: String? = null,
+    val poster: String? = null,
 
     @ColumnInfo(name = "years")
-    var years: String? = null,
+    val years: String? = null,
 
     @ColumnInfo(name = "score")
-    var score: Double? = 0.0,
+    val score: Double? = 0.0,
 
     @ColumnInfo(name = "duration")
-    var duration: Int? = 0,
+    val duration: Int? = 0,
 
     @ColumnInfo(name = "genre")
-    var genre: String? = null,
+    val genre: String? = null,
 
     @ColumnInfo(name = "overview")
-    var overview: String? = null,
+    val overview: String? = null,
 
     @ColumnInfo(name = "isFav")
-    var isFav: Boolean = false
+    val isFav: Boolean = false
 )

@@ -141,6 +141,11 @@ class FavoriteCatalogueFragment : Fragment() {
         }
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
+    }
+
     companion object {
         private const val ARG_SECTION_NUMBER = "section_number"
 

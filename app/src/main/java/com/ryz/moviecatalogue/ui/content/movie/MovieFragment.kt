@@ -42,7 +42,7 @@ class MovieFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         if (activity != null) {
-            (activity as MainActivity).supportActionBar?.title = "Movie Catalogue"
+            (activity as MainActivity).supportActionBar?.title = getString(R.string.title_movie)
             showLoading(true)
             setViewModel()
         }
@@ -100,8 +100,8 @@ class MovieFragment : Fragment() {
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
+        super.onDestroyView()
         binding = null
     }
 
