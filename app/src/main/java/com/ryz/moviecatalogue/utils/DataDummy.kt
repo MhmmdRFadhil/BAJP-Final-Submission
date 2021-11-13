@@ -1,7 +1,7 @@
 package com.ryz.moviecatalogue.utils
 
-import com.ryz.moviecatalogue.data.source.entity.CatalogueEntity
-import com.ryz.moviecatalogue.data.source.entity.DetailEntity
+import com.ryz.moviecatalogue.data.source.local.entity.MovieEntity
+import com.ryz.moviecatalogue.data.source.local.entity.TvShowEntity
 import com.ryz.moviecatalogue.data.source.remote.response.movie.GenreMoviesDetail
 import com.ryz.moviecatalogue.data.source.remote.response.movie.MoviesDetailResponse
 import com.ryz.moviecatalogue.data.source.remote.response.movie.MoviesResponse
@@ -10,11 +10,11 @@ import com.ryz.moviecatalogue.data.source.remote.response.tvshow.TvShowDetailRes
 import com.ryz.moviecatalogue.data.source.remote.response.tvshow.TvShowResponse
 
 object DataDummy {
-    fun getMovie(): List<CatalogueEntity> {
-        val movies = ArrayList<CatalogueEntity>()
+    fun getMovie(): List<MovieEntity> {
+        val movies = ArrayList<MovieEntity>()
 
         movies.add(
-            CatalogueEntity(
+            MovieEntity(
                 0,
                 "Venom: Let There Be Carnage",
                 "/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg"
@@ -22,7 +22,7 @@ object DataDummy {
         )
 
         movies.add(
-            CatalogueEntity(
+            MovieEntity(
                 1,
                 "Alita: Battle Angle",
                 "/xRWht48C2V8XNfzvPehyClOvDni.jpg"
@@ -30,7 +30,7 @@ object DataDummy {
         )
 
         movies.add(
-            CatalogueEntity(
+            MovieEntity(
                 2,
                 "Aquaman",
                 "/xLPffWMhMj1l50ND3KchMjYoKmE.jpg"
@@ -38,7 +38,7 @@ object DataDummy {
         )
 
         movies.add(
-            CatalogueEntity(
+            MovieEntity(
                 3,
                 "Bohemian Rhapsody",
                 "/lHu1wtNaczFPGFDTrjCSzeLPTKN.jpg"
@@ -46,7 +46,7 @@ object DataDummy {
         )
 
         movies.add(
-            CatalogueEntity(
+            MovieEntity(
                 4,
                 "Cold Pursuit",
                 "/hXgmWPd1SuujRZ4QnKLzrj79PAw.jpg"
@@ -54,7 +54,7 @@ object DataDummy {
         )
 
         movies.add(
-            CatalogueEntity(
+            MovieEntity(
                 5,
                 "Creed II",
                 "/v3QyboWRoA4O9RbcsqH8tJMe8EB.jpg"
@@ -62,7 +62,7 @@ object DataDummy {
         )
 
         movies.add(
-            CatalogueEntity(
+            MovieEntity(
                 6,
                 "Fantastic Beast: The Crimes of Grindelwald",
                 "/fMMrl8fD9gRCFJvsx0SuFwkEOop.jpg"
@@ -70,7 +70,7 @@ object DataDummy {
         )
 
         movies.add(
-            CatalogueEntity(
+            MovieEntity(
                 7,
                 "Glass",
                 "/svIDTNUoajS8dLEo7EosxvyAsgJ.jpg"
@@ -78,7 +78,7 @@ object DataDummy {
         )
 
         movies.add(
-            CatalogueEntity(
+            MovieEntity(
                 8,
                 "How to Train Your Dragon: The Hidden World",
                 "/xvx4Yhf0DVH8G4LzNISpMfFBDy2.jpg"
@@ -86,7 +86,7 @@ object DataDummy {
         )
 
         movies.add(
-            CatalogueEntity(
+            MovieEntity(
                 9,
                 "Avengers: Infinity Wars",
                 "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
@@ -96,24 +96,25 @@ object DataDummy {
         return movies
     }
 
-    fun getMovieDetail(): DetailEntity {
-        return DetailEntity(
+    fun getMovieDetail(): MovieEntity {
+        return MovieEntity(
             0,
             "Venom: Let There Be Carnage",
+            "/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg",
             "2021-09-30",
             6.9,
             97,
-            listOf("Science Fiction", "Action"),
+            "Science, Fiction, Action",
             "After finding a host body in investigative reporter Eddie Brock, the alien symbiote must face a new enemy, Carnage, the alter ego of serial killer Cletus Kasady.",
-            "/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg"
+            false
         )
     }
 
-    fun getTvShow(): List<CatalogueEntity> {
-        val tvShow = ArrayList<CatalogueEntity>()
+    fun getTvShow(): List<MovieEntity> {
+        val tvShow = ArrayList<MovieEntity>()
 
         tvShow.add(
-            CatalogueEntity(
+            MovieEntity(
                 0,
                 "Meet",
                 "/9X7FovF5n8NQUHUPJYYfxRlF3yp.jpg"
@@ -121,7 +122,7 @@ object DataDummy {
         )
 
         tvShow.add(
-            CatalogueEntity(
+            MovieEntity(
                 1,
                 "Doom Patrol",
                 "/kOAn06LmRCg4YiSStwrGL6UOQ3a.jpg"
@@ -129,7 +130,7 @@ object DataDummy {
         )
 
         tvShow.add(
-            CatalogueEntity(
+            MovieEntity(
                 2,
                 "Dragon Ball",
                 "/tZ0jXOeYBWPZ0OWzUhTlYvMF7YR.jpg"
@@ -137,7 +138,7 @@ object DataDummy {
         )
 
         tvShow.add(
-            CatalogueEntity(
+            MovieEntity(
                 3,
                 "Fairy Tail",
                 "/jsYTctFnK8ewomnUgcwhmsTkOum.jpg"
@@ -145,7 +146,7 @@ object DataDummy {
         )
 
         tvShow.add(
-            CatalogueEntity(
+            MovieEntity(
                 4,
                 "Family Guy",
                 "/9RBeCo8QSaoJLmmuzlwzVH3Hi12.jpg"
@@ -153,7 +154,7 @@ object DataDummy {
         )
 
         tvShow.add(
-            CatalogueEntity(
+            MovieEntity(
                 5,
                 "The Flash",
                 "/lJA2RCMfsWoskqlQhXPSLFQGXEJ.jpg"
@@ -161,7 +162,7 @@ object DataDummy {
         )
 
         tvShow.add(
-            CatalogueEntity(
+            MovieEntity(
                 6,
                 "Game of Throne",
                 "/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg"
@@ -169,7 +170,7 @@ object DataDummy {
         )
 
         tvShow.add(
-            CatalogueEntity(
+            MovieEntity(
                 7,
                 "Gotham",
                 "/4XddcRDtnNjYmLRMYpbrhFxsbuq.jpg"
@@ -177,7 +178,7 @@ object DataDummy {
         )
 
         tvShow.add(
-            CatalogueEntity(
+            MovieEntity(
                 8,
                 "Grey's Anatomy",
                 "/zPIug5giU8oug6Xes5K1sTfQJxY.jpg"
@@ -185,7 +186,7 @@ object DataDummy {
         )
 
         tvShow.add(
-            CatalogueEntity(
+            MovieEntity(
                 9,
                 "Hanna",
                 "/iYUtjx1EN4SVTgxd2TB4cZTGSQb.jpg"
@@ -195,16 +196,17 @@ object DataDummy {
         return tvShow
     }
 
-    fun getTvShowDetail(): DetailEntity {
-        return DetailEntity(
+    fun getTvShowDetail(): TvShowEntity {
+        return TvShowEntity(
             0,
             "Meet",
+            "/9X7FovF5n8NQUHUPJYYfxRlF3yp.jpg",
             "2021-08-23",
             3.2,
             21,
-            listOf("Drama", "Soap"),
+            "Drama, Soap",
             "A remake of Zee Sarthak’s Sindura Bindu.\n\nDespite her efforts to provide for her family, Meets disregard for societal gender norms and her nonconformist job as a delivery agent make her an unsuitable girl in the eyes of her family.",
-            "/9X7FovF5n8NQUHUPJYYfxRlF3yp.jpg"
+            false
         )
     }
 
@@ -215,7 +217,7 @@ object DataDummy {
             MoviesResponse(
                 0,
                 "Venom: Let There Be Carnage",
-                "/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg"
+                "/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg",
             )
         )
 
@@ -223,7 +225,7 @@ object DataDummy {
             MoviesResponse(
                 1,
                 "Alita: Battle Angle",
-                "/xRWht48C2V8XNfzvPehyClOvDni.jpg"
+                "/xRWht48C2V8XNfzvPehyClOvDni.jpg",
             )
         )
 
@@ -231,7 +233,7 @@ object DataDummy {
             MoviesResponse(
                 2,
                 "Aquaman",
-                "/xLPffWMhMj1l50ND3KchMjYoKmE.jpg"
+                "/xLPffWMhMj1l50ND3KchMjYoKmE.jpg",
             )
         )
 
@@ -239,7 +241,7 @@ object DataDummy {
             MoviesResponse(
                 3,
                 "Bohemian Rhapsody",
-                "/lHu1wtNaczFPGFDTrjCSzeLPTKN.jpg"
+                "/lHu1wtNaczFPGFDTrjCSzeLPTKN.jpg",
             )
         )
 
@@ -247,7 +249,7 @@ object DataDummy {
             MoviesResponse(
                 4,
                 "Cold Pursuit",
-                "/hXgmWPd1SuujRZ4QnKLzrj79PAw.jpg"
+                "/hXgmWPd1SuujRZ4QnKLzrj79PAw.jpg",
             )
         )
 
@@ -255,7 +257,7 @@ object DataDummy {
             MoviesResponse(
                 5,
                 "Creed II",
-                "/v3QyboWRoA4O9RbcsqH8tJMe8EB.jpg"
+                "/v3QyboWRoA4O9RbcsqH8tJMe8EB.jpg",
             )
         )
 
@@ -263,7 +265,7 @@ object DataDummy {
             MoviesResponse(
                 6,
                 "Fantastic Beast: The Crimes of Grindelwald",
-                "/fMMrl8fD9gRCFJvsx0SuFwkEOop.jpg"
+                "/fMMrl8fD9gRCFJvsx0SuFwkEOop.jpg",
             )
         )
 
@@ -271,7 +273,7 @@ object DataDummy {
             MoviesResponse(
                 7,
                 "Glass",
-                "/svIDTNUoajS8dLEo7EosxvyAsgJ.jpg"
+                "/svIDTNUoajS8dLEo7EosxvyAsgJ.jpg",
             )
         )
 
@@ -279,7 +281,7 @@ object DataDummy {
             MoviesResponse(
                 8,
                 "How to Train Your Dragon: The Hidden World",
-                "/xvx4Yhf0DVH8G4LzNISpMfFBDy2.jpg"
+                "/xvx4Yhf0DVH8G4LzNISpMfFBDy2.jpg",
             )
         )
 
@@ -287,7 +289,7 @@ object DataDummy {
             MoviesResponse(
                 9,
                 "Avengers: Infinity Wars",
-                "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
+                "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
             )
         )
 
@@ -323,7 +325,7 @@ object DataDummy {
             TvShowResponse(
                 0,
                 "Meet",
-                "/9X7FovF5n8NQUHUPJYYfxRlF3yp.jpg"
+                "/9X7FovF5n8NQUHUPJYYfxRlF3yp.jpg",
             )
         )
 
@@ -331,7 +333,7 @@ object DataDummy {
             TvShowResponse(
                 1,
                 "Doom Patrol",
-                "/kOAn06LmRCg4YiSStwrGL6UOQ3a.jpg"
+                "/kOAn06LmRCg4YiSStwrGL6UOQ3a.jpg",
             )
         )
 
@@ -339,7 +341,7 @@ object DataDummy {
             TvShowResponse(
                 2,
                 "Dragon Ball",
-                "/tZ0jXOeYBWPZ0OWzUhTlYvMF7YR.jpg"
+                "/tZ0jXOeYBWPZ0OWzUhTlYvMF7YR.jpg",
             )
         )
 
@@ -347,7 +349,7 @@ object DataDummy {
             TvShowResponse(
                 3,
                 "Fairy Tail",
-                "/jsYTctFnK8ewomnUgcwhmsTkOum.jpg"
+                "/jsYTctFnK8ewomnUgcwhmsTkOum.jpg",
             )
         )
 
@@ -355,7 +357,7 @@ object DataDummy {
             TvShowResponse(
                 4,
                 "Family Guy",
-                "/9RBeCo8QSaoJLmmuzlwzVH3Hi12.jpg"
+                "/9RBeCo8QSaoJLmmuzlwzVH3Hi12.jpg",
             )
         )
 
@@ -363,7 +365,7 @@ object DataDummy {
             TvShowResponse(
                 5,
                 "The Flash",
-                "/lJA2RCMfsWoskqlQhXPSLFQGXEJ.jpg"
+                "/lJA2RCMfsWoskqlQhXPSLFQGXEJ.jpg",
             )
         )
 
@@ -371,7 +373,7 @@ object DataDummy {
             TvShowResponse(
                 6,
                 "Game of Throne",
-                "/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg"
+                "/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
             )
         )
 
@@ -379,7 +381,7 @@ object DataDummy {
             TvShowResponse(
                 7,
                 "Gotham",
-                "/4XddcRDtnNjYmLRMYpbrhFxsbuq.jpg"
+                "/4XddcRDtnNjYmLRMYpbrhFxsbuq.jpg",
             )
         )
 
@@ -387,7 +389,7 @@ object DataDummy {
             TvShowResponse(
                 8,
                 "Grey's Anatomy",
-                "/zPIug5giU8oug6Xes5K1sTfQJxY.jpg"
+                "/zPIug5giU8oug6Xes5K1sTfQJxY.jpg",
             )
         )
 
@@ -395,7 +397,7 @@ object DataDummy {
             TvShowResponse(
                 9,
                 "Hanna",
-                "/iYUtjx1EN4SVTgxd2TB4cZTGSQb.jpg"
+                "/iYUtjx1EN4SVTgxd2TB4cZTGSQb.jpg",
             )
         )
         return tvShow

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.DetailActivity">
+    tools:context=".ui.detail.DetailActivity">
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nested_scrollview"
@@ -183,4 +183,18 @@
         android:layout_gravity="center"
         android:visibility="gone"
         tools:visibility="visible" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:contentDescription="@string/fab"
+        android:focusable="true"
+        android:foregroundGravity="bottom"
+        android:src="@drawable/ic_baseline_favorite_border_24"
+        app:fabSize="normal"
+        app:layout_anchor="@id/nested_scrollview"
+        app:layout_anchorGravity="bottom|end|right" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -45,7 +45,6 @@ class MainActivityTest {
 
     @Test
     fun loadDetailMovie() {
-
         onView(withId(R.id.rvMovie)).perform(
             RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
                 0,
@@ -68,7 +67,7 @@ class MainActivityTest {
 
     @Test
     fun loadTvShow() {
-        onView(withText("TV Show")).perform(click())
+        onView(withId(R.id.tvShowFragment)).perform(click())
         onView(withId(R.id.rvTvShow)).apply {
             check(matches(isDisplayed()))
             perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(dummyTvShow.size))
@@ -77,7 +76,7 @@ class MainActivityTest {
 
     @Test
     fun loadTvShowDetail() {
-        onView(withText("TV Show")).perform(click())
+        onView(withId(R.id.tvShowFragment)).perform(click())
         onView(withId(R.id.rvTvShow)).perform(
             RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
                 0,
@@ -96,5 +95,51 @@ class MainActivityTest {
 
         onView(withId(R.id.tvOverviewDetail)).check(matches(isDisplayed()))
 
+    }
+
+    @Test
+    fun addRemoveFavoriteMovie() {
+        onView(withId(R.id.rvMovie)).perform(
+            RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
+                0,
+                click()
+            )
+        )
+        onView(withId(R.id.fabAddFavorite)).perform(click())
+        onView(isRoot()).perform(pressBack())
+        onView(withId(R.id.favoriteFragment)).perform(click())
+        onView(withId(R.id.rvFavoriteCatalogue)).perform(
+            RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
+                0,
+                click()
+            )
+        )
+        onView(withId(R.id.fabAddFavorite)).perform(click())
+        onView(isRoot()).perform(pressBack())
+        onView(withId(R.id.layoutEmptyData)).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun addRemoveFavoriteTvShow() {
+        onView(withId(R.id.tvShowFragment)).perform(click())
+        onView(withId(R.id.rvTvShow)).perform(
+            RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
+                0,
+                click()
+            )
+        )
+        onView(withId(R.id.fabAddFavorite)).perform(click())
+        onView(isRoot()).perform(pressBack())
+        onView(withId(R.id.favoriteFragment)).perform(click())
+        onView(withId(R.id.layoutEmptyData)).perform(swipeLeft())
+        onView(withId(R.id.rvFavoriteCatalogue)).perform(
+            RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
+                0,
+                click()
+            )
+        )
+        onView(withId(R.id.fabAddFavorite)).perform(click())
+        onView(isRoot()).perform(pressBack())
+        onView(withId(R.id.layoutEmptyData)).check(matches(isDisplayed()))
     }
 }

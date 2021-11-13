@@ -4,13 +4,25 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/drawable/background_overlay.xml" value="0.22962962962962963" />
-        <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/layout/activity_detail.xml" value="0.2101851851851852" />
+        <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.21388888888888888" />
+        <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/drawable/ic_baseline_sort_24.xml" value="0.24666666666666667" />
+        <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/layout/activity_detail.xml" value="0.264" />
+        <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/layout/activity_favorite.xml" value="0.234375" />
+        <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/layout/activity_splash_screen.xml" value="0.22592592592592592" />
+        <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/layout/empty_data.xml" value="0.234375" />
         <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/layout/fragment_catalogue.xml" value="0.19444444444444445" />
+        <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/layout/fragment_favorite.xml" value="0.234375" />
+        <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/layout/fragment_favorite_catalogue.xml" value="0.2" />
         <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/layout/fragment_movie.xml" value="0.1962962962962963" />
         <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/layout/fragment_tv_show.xml" value="0.1962962962962963" />
         <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/layout/item_row_catalogue.xml" value="0.264" />
         <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/layout/item_row_movies.xml" value="0.1962962962962963" />
+        <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/menu/item_favorite.xml" value="0.234375" />
+        <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/menu/item_menu.xml" value="0.19444444444444445" />
+        <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/menu/item_navigation.xml" value="0.234375" />
+        <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/menu/item_share.xml" value="0.234375" />
+        <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/menu/item_sort.xml" value="0.21296296296296297" />
       </map>
     </option>
   </component>

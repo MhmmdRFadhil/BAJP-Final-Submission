@@ -2,7 +2,9 @@ package com.ryz.moviecatalogue.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.google.android.material.tabs.TabLayoutMediator
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
+import com.ryz.moviecatalogue.R
 import com.ryz.moviecatalogue.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -12,13 +14,17 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val sectionPagerAdapter = SectionPagerAdapter(this)
-        binding.viewPager.adapter = sectionPagerAdapter
-
-        TabLayoutMediator(binding.tabs, binding.viewPager) { tabs, position ->
-            tabs.text = resources.getString(SectionPagerAdapter.TAB_TITLES[position])
-        }.attach()
-
         supportActionBar?.elevation = 0f
+        setupBottomNavigation()
+    }
+
+    private fun setupBottomNavigation() {
+        val bottomNavigation = binding.bottomNavMain
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_main) as NavHostFragment
+        NavigationUI.setupWithNavController(
+            bottomNavigation,
+            navHostFragment.navController
+        )
     }
 }

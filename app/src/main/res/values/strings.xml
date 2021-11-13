@@ -13,4 +13,27 @@
     <string name="share">Share</string>
     <string name="no_info">No info</string>
     <string name="unknown">-</string>
+    <string name="fab">FAB</string>
+    <string name="title_ascending">Title Ascending</string>
+    <string name="title_descending">Title Descending</string>
+    <string name="random">Random</string>
+    <string name="error_message">Terjadi kesalahan</string>
+    <string name="menu_favorite">Favorite</string>
+    <string name="movie_successfully_added">Movie successfully added to favorite list</string>
+    <string name="movie_successfully_removed">Movie successfully removed from favorite list</string>
+    <string name="tv_show_successfully_added">Tv Show successfully added to favorite list</string>
+    <string name="tv_show_successfully_removed">Tv Show successfully removed from favorite list</string>
+    <string name="sort_movie_ascending">Sort Title Movie by Ascending</string>
+    <string name="sort_movie_descending">Sort Title Movie by Descending</string>
+    <string name="sort_movie_random">Sort Title Movie by Random</string>
+    <string name="sort_tv_show_ascending">Sort TV Show by Ascending</string>
+    <string name="sort_tv_show_descending">Sort TV Show by Descending</string>
+    <string name="sort_tv_show_random">Sort TV Show by Random</string>
+    <string name="empty_data">Empty Data</string>
+    <string name="title_empty_data">Lorem ipsum dolor sit amet</string>
+    <string name="subtitle_empty_data">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed ornare justo</string>
+    <string name="title_result_empty_data_movie">My favorite Movie list is empty</string>
+    <string name="subtitle_result_empty_data_movie">Please add the Movie of your choice so that it appears on this page</string>
+    <string name="title_result_empty_data_tv_show">My favorite TV Show list is empty</string>
+    <string name="subtitle_result_empty_data_tv_show">Please add the TV Show of your choice so that it appears on this page</string>
 </resources>
