@@ -34,5 +34,5 @@ data class MovieEntity(
     val overview: String? = null,
 
     @ColumnInfo(name = "isFav")
-    val isFav: Boolean = false
+    var isFav: Boolean = false
 )
