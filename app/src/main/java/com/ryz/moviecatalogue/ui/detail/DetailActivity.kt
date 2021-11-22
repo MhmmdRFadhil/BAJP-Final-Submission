@@ -109,7 +109,7 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
         setFavState(detail.isFav)
         binding.apply {
             detail.poster?.let { posterDetail.loadImageUrl(it) }
-            tvTitleDetail.text = title
+            tvTitleDetail.text = detail.title
             tvUserScoreDetail.text = detail.score.toString()
 
             tvGenreDetail.text = detail.genre
@@ -133,7 +133,7 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
         setFavState(detail.isFav)
         binding.apply {
             detail.poster?.let { posterDetail.loadImageUrl(it) }
-            tvTitleDetail.text = title
+            tvTitleDetail.text = detail.title
             tvUserScoreDetail.text = detail.score.toString()
 
             tvGenreDetail.text = detail.genre
