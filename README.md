@@ -1,6 +1,7 @@
 # Belajar Android Jetpack Pro Final Submission
 
-This repository is the final submission in [Dicoding](https://www.dicoding.com/academies/129)
+This repository is the final submission in [Dicoding](https://www.dicoding.com/academies/129)<br><br>
+[![Platform](https://img.shields.io/badge/platform-Android-green.svg)](http://developer.android.com/index.html)
 
 ## MAD SCORE
 ![alt text](https://github.com/MhmmdRFadhil/BAJP-Final-Submission/blob/master/screenshot/summary.png)
