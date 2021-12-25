@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/drawable/background_overlay.xml" value="0.22962962962962963" />
+        <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/drawable/ic_baseline_broken_image_24.xml" value="0.1814814814814815" />
+        <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/drawable/ic_baseline_refresh_24.xml" value="0.1814814814814815" />
         <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.21388888888888888" />
         <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/drawable/ic_baseline_sort_24.xml" value="0.24666666666666667" />
         <entry key="..\:/Aplikasi/AndroidStudio/Project/MovieCatalogue/app/src/main/res/layout/activity_detail.xml" value="0.264" />
