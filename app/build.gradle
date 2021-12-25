@@ -14,7 +14,7 @@ android {
         targetSdk 31
         versionCode 1
         versionName "1.0"
-        buildConfigField("String", "API_KEY", '"YOUR_KEY"')
+        buildConfigField("String", "API_KEY", '"YOUR_API_KEY"')
         buildConfigField("String", "BASE_URL", '"https://api.themoviedb.org/3/"')
         buildConfigField("String", "IMAGE_URL", '"https://image.tmdb.org/t/p/w500/"')
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
