@@ -119,7 +119,7 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
 
 
             supportActionBar?.apply {
-                title = title
+                title = detail.title
                 setDisplayHomeAsUpEnabled(true)
             }
 
